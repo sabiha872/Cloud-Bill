@@ -1,0 +1,50 @@
+{
+  "name": "cloudbill",
+  "version": "1.0.0",
+  "description": "CloudBill – Cloud-Native SaaS Subscription & Billing Platform",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "cross-env NODE_ENV=test jest --runInBand --detectOpenHandles",
+    "lint": "eslint .",
+    "db:init": "node scripts/initDatabase.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "saas",
+    "billing",
+    "express",
+    "postgres",
+    "redis"
+  ],
+  "author": "CloudBill",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bullmq": "^6.3.11",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.1.3",
+    "helmet": "^8.3.0",
+    "ioredis": "^5.7.0",
+    "joi": "^17.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.16.0",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^10.0.0",
+    "winston": "^3.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.0.0"
+  }
+}
